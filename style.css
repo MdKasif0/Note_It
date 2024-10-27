@@ -155,9 +155,9 @@ ul li {
 .confirmation-banner {
     position: fixed;
     width: 90vw;
-    top: 85vh;
+    top: 90vh;
     left: 1vw;
-    transform: translateX(0vw);
+    transform: translateX(-2vw);
     background-color: #1D1D1D;
     color: ghostwhite;
     padding: 8vw 25vw;
