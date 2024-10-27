@@ -1,0 +1,1 @@
+// No dynamic functionality needed for Privacy Policy page

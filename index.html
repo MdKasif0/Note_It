@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Notes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </label>
+        <label id="overlay" for="sidebar-active"></label>
+        <div class="links-container">
+            <label for="sidebar-active" class="close-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </label>
+
+            <a class="home-link" href="index.html">Home</a> 
+            <a href="tasks.html"><div>Tasks</div></a> 
+            <a href="about_app.html"><div>About App</div></a>
+            <a href="developer.html"><div>Developer</div></a>
+            <a href="privacy_policy.html"><div>Privacy Policy</div></a>
+        </div>
+    </nav>
+    <div class="container">
+        <header class="app-header">
+            <h1>Notes</h1>
+            <a href="add_note.html"><div class="circle">
+                <i class="fa-solid fa-plus"></i>
+            </div></a>
+        </header>
+
+        <main>
+            <section id="view-notes-section" class="app-section">
+                <ul class="notes_list" id="notes-list"></ul>
+            </section>
+        </main>
+    </div>
+    
+    <!-- Bottom Navigation Bar -->
+    <div class="bottom-nav">
+        <a href="index.html" class="bottom-nav-link">
+            <i class="fa-solid fa-file-lines"></i>
+            <span>Notes</span>
+        </a>
+        <a href="tasks.html" class="bottom-nav-link">
+            <i class="fa-regular fa-square-check"></i>
+            <span>Tasks</span>
+        </a>
+    </div>
+
+    <!-- Professional confirmation banner -->
+    <div class="confirmation-banner banner-hide" id="confirmation-banner">
+        Note deleted successfully!
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

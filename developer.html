@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Note It - Your Simple Note-Taking App</title>
+    <link rel="stylesheet" href="developer.css">
+</head>
+<body>
+  <nav>
+    <input type="checkbox" id="sidebar-active">
+    <label for="sidebar-active" class="open-sidebar-button">
+      <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+    </label>
+    <label id="overlay" for="sidebar-active"></label>
+    <div class="links-container">
+      <label for="sidebar-active" class="close-sidebar-button">
+        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+      </label>
+
+      <a class="home-link" href="index.html">Home</a> 
+      <a href="tasks.html"><div>Tasks</div></a> 
+      <a href="about_app.html"><div>About App</div></a>
+      <a href="developer.html"><div>Developer</div></a>
+      <a href="privacy_policy.html"><div>Privacy Policy</div></a>
+    </div>
+  </nav>
+    <header>
+        <div class="container">
+            <h1>Welcome to <span>Note It</span></h1>
+            
+        </div>
+    </header>
+
+    <main>
+        <section class="about">
+            <div class="container">
+                <h2>About Note It</h2>
+                <p>Note It was created by Md Kasif Uddin, a passionate developer who wanted to provide everyone with a simple and intuitive way to capture their thoughts and ideas. We believe that note-taking should be accessible, fast, and fun for everyone.</p><br>
+                <p>We are always looking for ways to improve the Note It experience. If you have any suggestions or feedback, please do not hesitate to let us know. Your input helps us to make Note It better!</p>
+            </div>
+        </section>
+
+        <section class="feedback">
+            <div class="container">
+                <h2>We Value Your Feedback</h2>
+                <p>Have feedback? Share your thoughts below:</p>
+                <form id="feedbackForm">
+                    <textarea id="feedbackInput" placeholder="Your feedback..." required></textarea>
+                    <button onclick="sendNotification()" type="submit">Submit Feedback</button>
+                </form>
+                <p id="thankYouMessage" class="hidden">Thank you for your feedback!</p>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="container">
+                <h2>Contact Developer</h2>
+                <p>If you have any questions, concerns, or ideas, feel free to reach out to the developer directly.</p>
+                <p>Email:- <a href="mailto:mdkasifuddin123@gmail.com">mdkasifuddin123@gmail.com</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Thank you for choosing <span>Note It</span>! We hope you enjoy using it to capture your ideas and thoughts.</p>
+        </div>
+    </footer>
+
+    <script src="developer.js"></script>
+</body>
+</html>

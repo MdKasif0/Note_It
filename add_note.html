@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note It</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="add_note.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
+            <button class="add_note" id="add-note">Add Note</button>
+        </header>
+
+        <main>
+            <section id="notes-section" class="app-section">
+                <input type="text" id="topic" placeholder="Title" />
+                <textarea id="task" rows="32" placeholder="Start typing..."></textarea>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal for success message -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+           <button class="close-button" type="submit">Close</button>
+            <p>Note saved successfully!</p>
+        </div>
+    </div>
+
+    <!-- Modal for error message -->
+    <div id="error-modal" class="modal">
+        <div class="modal-content">
+           <button class="close-button" type="submit">Close</button>
+            <p>Both topic and note content are required.</p>
+        </div>
+    </div>
+
+    <script src="add_note.js"></script>
+</body>
+</html>

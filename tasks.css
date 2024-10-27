@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+nav{
+  height: 6vh;
+  left: 80vw;
+  width: 15vw;
+  background-color: darkorange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 2vw;
+  margin: 3vw 0vw;
+}
+
+.links-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav a{
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: ghostwhite;
+}
+
+nav a:hover{
+  background-color: darkorange;
+}
+
+nav .home-link{
+  margin-right: auto;
+}
+
+nav svg{
+  fill: ghostwhite;
+}
+
+#sidebar-active{
+  display: none;
+}
+
+.open-sidebar-button, .close-sidebar-button{
+  display: none;
+}
+
+@media(max-width: 450px){
+  .links-container{
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 300px;
+    background-color: black;
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.75s ease-out;
+  }
+  
+  nav a{
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+  }
+  
+  .open-sidebar-button, .close-sidebar-button{
+    padding: 20px;
+    display: block;
+  }
+  
+  #sidebar-active:checked ~ .links-container{
+    right: 0;
+  }
+  
+  #sidebar-active:checked ~ #overlay{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+}
+
+body {
+  background-color: #000;
+  color: white;
+  font-family: 'Times New Roman', Times, serif, 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.tasks-container {
+  padding: 5vw;
+  margin: 0vh auto;
+  max-width: 90vw;
+}
+
+h1 {
+  font-size: 8vw;
+  text-align: center;
+  margin-bottom: 15vw;
+  color: #e0e0e0;
+}
+
+.task-input {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10vw;
+}
+
+.task-input input {
+  width: 65vw;
+  padding: 5vw;
+  font-size: 4.5vw;
+  border-radius: 3vw;
+  border: none;
+  margin-right: 3vw;
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+.task-input button {
+  padding: 0vw 3vw;
+  font-size: 3vw;
+  border: none;
+  background-color: #ff5722;
+  color: white;
+  border-radius: 3vw;
+  cursor: pointer;
+}
+
+.task-input button:hover {
+  background-color: #e64a19;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0vw;
+  padding-bottom: 10vw;
+}
+
+.task-card {
+  background-color: #222;
+  color: #e0e0e0;
+  padding: 15px;
+  margin-bottom: 5vw;
+  border-radius: 3vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-card .task {
+  display: flex;
+  align-items: center;
+}
+
+.task-card input[type="checkbox"] {
+  margin-right: 3vw;
+}
+
+.task-card .actions {
+  display: flex;
+  gap: 2vw;
+}
+
+.task-card .actions button {
+  background-color: #757575;
+  color: white;
+  border: none;
+  padding: 3vw;
+  border-radius: 2vw;
+  cursor: pointer;
+}
+
+.task-card .actions button:hover {
+  background-color: darkorange;
+}
+
+.task-card.completed {
+  background-color: antiquewhite;
+  text-decoration: line-through;
+  color: black;
+}
+
+.modal {
+  height: 90vh;
+  width: 100vw;
+  position: fixed;
+  top: 0vh;
+  left: 5vw;
+  width: 90%;
+  background-color: #0000008A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content1{
+  height:45vw;
+  width: 80vw;
+  background-color: #1D1D1D;
+  color: ghostwhite;
+  padding: 10vw;
+  border-radius: 3vw;
+  text-align: center;
+  position: fixed;
+}
+
+.modal-content1 input{
+  padding : 2vw 0vw 2vw 3vw;
+  width: 70vw;
+  color: ghostwhite;
+  background-color: #2C2C2C;
+  font-size: 5vw;
+  margin: 5vw 0vw 8vw 0vw;
+  border: none;
+  border-radius: 3vw;
+}
+
+.modal-content1 button{
+  width: 20vw;
+  background-color: black;
+  color: darkorange;
+  font-size: 4vw;
+  border: 0.5vw solid darkorange;
+  border-radius: 1.5vw;
+  position: absolute;
+}
+
+.reminder {
+  left: 20vw;
+  padding: 1vw 0vw vw 1vw;
+}
+
+.cancel {
+  left: 60vw;
+  padding: 3vw 2vw;
+}
+
+.modal-content2 {
+  background-color: #1D1D1D;
+  color: ghostwhite;
+  padding: 5vw;
+  border-radius: 3vw;
+  text-align: center;
+}
+
+.modal-content2 button {
+  background-color: black;
+  color: darkorange;
+  border: 0.5vw solid darkorange;
+  padding: 2.5vw 4vw;
+  border-radius: 2vw;
+  cursor: pointer;
+  margin-top: 8vw;
+}
+
+.popup-content{
+  height: 10vh;
+  width: 80vw;
+  color: ghostwhite;
+  background-color: #1D1D1D;
+  padding: 5vw;
+  border-radius: 3vw;
+  text-align: center;
+}
+
+.popup-content button{
+  height: 3vh;
+  width: 10vw;
+  margin-top: 5vw;
+  color: darkorange;
+  background-color: black;
+  border: 0.3vw solid darkorange;
+  border-radius: 1vw;
+}
+
+.modal-content2 button:hover {
+  background-color: #e64a19;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222222;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4vw 0vw;
+  z-index: 100;
+}
+
+.bottom-nav-link {
+  color: ghostwhite;
+  text-decoration: none;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.bottom-nav-link i {
+  font-size: 6vw;
+  color: ghostwhite;
+}
+
+.bottom-nav-link span {
+  display: block;
+  font-size: 3.5vw;
+  margin-top: 1vw;
+  color: ghostwhite;
+}
+
+.bottom-nav-link:hover {
+  color: darkorange;
+}
+
+/* Add the existing CSS here */
+
+/* Error Modal */
+.modal-content2 {
+  background-color: #1D1D1D;
+  color: ghostwhite;
+  padding: 5vw;
+  border-radius: 3vw;
+  text-align: center;
+}
+
+.modal-content2 button {
+  background-color: black;
+  color: darkorange;
+  border: 0.5vw solid darkorange;
+  padding: 2vw 4vw;
+  border-radius: 2vw;
+  cursor: pointer;
+  margin-top: 8vw;
+  font-size: 4vw;
+}
+
+.hidden {
+  display: none;
+}
